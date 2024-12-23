@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Notepad</title>
+  <script src="https://kit.fontawesome.com/37df75b44e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="hamburger">
+    <i class="fa-solid fa-bars" id="openColorBar"></i>
+  </div>
+  <div class="color-bar" id="colorBar">
+    <i class="fa-solid fa-xmark" id="closeColorBar"></i>
+    <div class="color-option" data-color="#f4f4f4" style="background-color: #f4f4f4; box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);"></div>
+    <div class="color-option" data-color="#ffadad" style="background-color: #ffadad;"></div>
+    <div class="color-option" data-color="#ffd6a5" style="background-color: #ffd6a5;"></div>
+    <div class="color-option" data-color="#fdffb6" style="background-color: #fdffb6;"></div>
+    <div class="color-option" data-color="#caffbf" style="background-color: #caffbf;"></div>
+    <div class="color-option" data-color="#9bf6ff" style="background-color: #9bf6ff;"></div>
+    <div class="color-option" data-color="#a0c4ff" style="background-color: #a0c4ff;"></div>
+    <div class="color-option" data-color="#bdb2ff" style="background-color: #bdb2ff;"></div>
+    <div class="color-option" data-color="#ffc6ff" style="background-color: #ffc6ff;"></div>
+    <div class="color-option" data-color="#ffb5e8" style="background-color: #ffb5e8;"></div>
+    <div class="color-option" data-color="#FF8C00" style="background-color: #FF8C00;"></div>
+    <div class="color-option" data-color="#8A2BE2" style="background-color: #8A2BE2;"></div>
+    <div class="color-option" data-color="#5F9EA0" style="background-color: #5F9EA0;"></div>
+    <div class="color-option" data-color="#D2691E" style="background-color: #D2691E;"></div>
+    <div class="color-option" data-color="#FF1493" style="background-color: #FF1493;"></div>
+    <div class="color-option" data-color="#ADFF2F" style="background-color: #ADFF2F;"></div>
+    <div class="color-option" data-color="#FF6347" style="background-color: #FF6347;"></div>
+    <div class="color-option" data-color="#20B2AA" style="background-color: #20B2AA;"></div>
+    <div class="color-option" data-color="#87CEEB" style="background-color: #87CEEB;"></div>
+    <div class="color-option" data-color="#778899" style="background-color: #778899;"></div>
+  </div>
+  
+  <div class="container">
+    <div class="header">
+      <h3>Online Notepad</h3>
+      <div class="controls">
+        <button id="undoBtn" class="control-btn" title="Undo"><i class="fa-solid fa-rotate-left"></i></button>
+        <button id="redoBtn" class="control-btn" title="Redo"><i class="fa-solid fa-rotate-right"></i></button>
+        <button id="resetBtn" class="control-btn" title="Reset"><i class="fa-solid fa-trash"></i></button>
+        <label class="switch" title="Toggle Theme">
+          <input type="checkbox" id="toggleModeCheckbox">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="note-card">
+      <h3 style="margin: 5px 0;">Add Note</h3>
+      <textarea id="noteText" class="note-text write" rows="3" placeholder="Write your note here..."></textarea>
+      <button id="addNoteBtn" class="addNote">Add Note</button>
+    </div>
+    <div id="notesContainer" class="notes-container"></div>
+  </div>
+
+  <div id="resetModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Are you sure you want to delete all notes?</p>
+      <div class="modal-actions">
+        <button id="confirmResetBtn" class="btn">Yes</button>
+        <button id="cancelResetBtn" class="btn">No</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Copyright &copy; Gaurav kumar. 11 November 2024. All rights</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
